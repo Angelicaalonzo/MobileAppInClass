@@ -1,8 +1,36 @@
+class AppComponent extends React.Component {
+
+    //constructor
+    constructor(props){
+        super(props);
+    }
+
+    render() {
+        return (
+            <div className="container">
+                
+                <EmailInput />
+                <PasswordInput />
+                <Button/>
+                
+            </div>
+        );
+    };
+}
+
+/*
+const App = () => {
+    return React.createElement('div', {}, [
+        React.createElement('h1', null, "To Do List"),
+        React.createElement(ToDoList, {
+            itemone: "brush up on React",
+            itemtwo: "practice more git commands",
+            itemthree: "learn more JavaScript"
+        }),
+        React.createElement(FormInput, {}),
+    ]);
+};*/
 
 var root = document.getElementById('root');
-
-var form = React.createElement('div', null, 
-    React.createElement('form',{}, 
-    ));
-
-ReactDOM.render(form, root);
+// ReactDOM.render(React.createElement(AppComponent), root);
+ReactDOM.render(<AppComponent />, root);
